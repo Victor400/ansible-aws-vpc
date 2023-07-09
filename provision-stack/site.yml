@@ -12,10 +12,10 @@
   import_playbook: memcached.yml
 
 - name: Setup rabbitmq service
-  mport_playbook: rabbitmq.yml
+  import_playbook: rabbitmq.yml
 
 - name: Setup Tomcat application service
-  mport_playbook: appserver.yml
+  import_playbook: appserver.yml
 
 - name: Setup Nginx webserver
-  mport_playbook: web.yml
+  import_playbook: web.yml
