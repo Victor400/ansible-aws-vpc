@@ -1,0 +1,19 @@
+2023-07-09 22:52:51,129 p=7281 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *************************************************************************************************************
+2023-07-09 22:52:51,143 p=7281 u=ubuntu n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2023-07-09 22:52:52,637 p=7281 u=ubuntu n=ansible | ok: [cntl]
+2023-07-09 22:53:00,441 p=7281 u=ubuntu n=ansible | fatal: [app01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.31.50 port 22: No route to host", "unreachable": true}
+2023-07-09 22:53:01,881 p=7281 u=ubuntu n=ansible | fatal: [db01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.23.219 port 22: No route to host", "unreachable": true}
+2023-07-09 22:53:37,281 p=7281 u=ubuntu n=ansible | fatal: [web01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.20.4.228 port 22: Connection timed out", "unreachable": true}
+2023-07-09 22:53:37,309 p=7281 u=ubuntu n=ansible | fatal: [rmq01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.20.4.75 port 22: Connection timed out", "unreachable": true}
+2023-07-09 22:53:37,329 p=7281 u=ubuntu n=ansible | fatal: [mc01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.20.4.25 port 22: Connection timed out", "unreachable": true}
+2023-07-09 22:53:37,341 p=7281 u=ubuntu n=ansible | TASK [Import VPC setup Variable] ***************************************************************************************************************************************************************
+2023-07-09 22:53:37,356 p=7281 u=ubuntu n=ansible | ok: [cntl]
+2023-07-09 22:53:37,366 p=7281 u=ubuntu n=ansible | TASK [Update hosts file for all the hosts] *****************************************************************************************************************************************************
+2023-07-09 22:53:37,756 p=7281 u=ubuntu n=ansible | changed: [cntl]
+2023-07-09 22:53:37,760 p=7281 u=ubuntu n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2023-07-09 22:53:37,760 p=7281 u=ubuntu n=ansible | app01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-09 22:53:37,760 p=7281 u=ubuntu n=ansible | cntl                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-09 22:53:37,761 p=7281 u=ubuntu n=ansible | db01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-09 22:53:37,761 p=7281 u=ubuntu n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-09 22:53:37,761 p=7281 u=ubuntu n=ansible | rmq01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-09 22:53:37,761 p=7281 u=ubuntu n=ansible | web01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
