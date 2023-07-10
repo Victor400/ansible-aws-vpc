@@ -129,7 +129,7 @@
       register: db01_out
 
     - debug:
-        var: db01_out.instances[0].id
+        var: db01_out
 
     - name: Creating memcache mc01
       ec2:
