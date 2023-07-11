@@ -53,3 +53,74 @@
 2023-07-10 22:59:36,284 p=6973 u=ubuntu n=ansible | mc01                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
 2023-07-10 22:59:36,284 p=6973 u=ubuntu n=ansible | rmq01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
 2023-07-10 22:59:36,284 p=6973 u=ubuntu n=ansible | web01                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-10 23:44:29,096 p=7353 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-07-10 23:44:29,097 p=7353 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-07-10 23:44:29,101 p=7353 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not
+match 'all'
+
+2023-07-10 23:44:29,256 p=7353 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] **********************************
+2023-07-10 23:44:29,257 p=7353 u=ubuntu n=ansible | skipping: no hosts matched
+2023-07-10 23:44:29,257 p=7353 u=ubuntu n=ansible | PLAY RECAP **********************************************************************************************************
+2023-07-10 23:47:21,780 p=7370 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-07-10 23:47:21,781 p=7370 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-07-10 23:47:21,784 p=7370 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not
+match 'all'
+
+2023-07-10 23:47:21,942 p=7370 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] **********************************
+2023-07-10 23:47:21,943 p=7370 u=ubuntu n=ansible | skipping: no hosts matched
+2023-07-10 23:47:21,943 p=7370 u=ubuntu n=ansible | PLAY RECAP **********************************************************************************************************
+2023-07-10 23:56:52,754 p=7429 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] **********************************
+2023-07-10 23:56:52,763 p=7429 u=ubuntu n=ansible | TASK [Gathering Facts] **********************************************************************************************
+2023-07-10 23:56:54,614 p=7429 u=ubuntu n=ansible | ok: [cntl]
+2023-07-10 23:56:55,651 p=7429 u=ubuntu n=ansible | ok: [web01]
+2023-07-10 23:56:55,690 p=7429 u=ubuntu n=ansible | ok: [rmq01]
+2023-07-10 23:56:55,695 p=7429 u=ubuntu n=ansible | ok: [app01]
+2023-07-10 23:56:55,724 p=7429 u=ubuntu n=ansible | ok: [mc01]
+2023-07-10 23:56:57,318 p=7429 u=ubuntu n=ansible | ok: [db01]
+2023-07-10 23:56:57,334 p=7429 u=ubuntu n=ansible | TASK [Import VPC setup Variable] ************************************************************************************
+2023-07-10 23:56:57,380 p=7429 u=ubuntu n=ansible | fatal: [cntl]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Could not find or access 'group_vars/hostsip'\nSearched in:\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-07-10 23:56:57,398 p=7429 u=ubuntu n=ansible | fatal: [web01]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Could not find or access 'group_vars/hostsip'\nSearched in:\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-07-10 23:56:57,420 p=7429 u=ubuntu n=ansible | fatal: [app01]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Could not find or access 'group_vars/hostsip'\nSearched in:\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-07-10 23:56:57,440 p=7429 u=ubuntu n=ansible | fatal: [rmq01]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Could not find or access 'group_vars/hostsip'\nSearched in:\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-07-10 23:56:57,443 p=7429 u=ubuntu n=ansible | fatal: [mc01]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Could not find or access 'group_vars/hostsip'\nSearched in:\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-07-10 23:56:57,451 p=7429 u=ubuntu n=ansible | fatal: [db01]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Could not find or access 'group_vars/hostsip'\nSearched in:\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/vars/group_vars/hostsip\n\t/home/ubuntu/ansible-aws-vpc/provision-stack/group_vars/hostsip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-07-10 23:56:57,453 p=7429 u=ubuntu n=ansible | PLAY RECAP **********************************************************************************************************
+2023-07-10 23:56:57,453 p=7429 u=ubuntu n=ansible | app01                      : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-07-10 23:56:57,453 p=7429 u=ubuntu n=ansible | cntl                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-07-10 23:56:57,453 p=7429 u=ubuntu n=ansible | db01                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-07-10 23:56:57,453 p=7429 u=ubuntu n=ansible | mc01                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-07-10 23:56:57,454 p=7429 u=ubuntu n=ansible | rmq01                      : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-07-10 23:56:57,454 p=7429 u=ubuntu n=ansible | web01                      : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-07-11 00:05:36,098 p=7721 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *************************************************************************************************************
+2023-07-11 00:05:36,107 p=7721 u=ubuntu n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2023-07-11 00:05:38,187 p=7721 u=ubuntu n=ansible | ok: [web01]
+2023-07-11 00:05:38,240 p=7721 u=ubuntu n=ansible | ok: [mc01]
+2023-07-11 00:05:38,249 p=7721 u=ubuntu n=ansible | ok: [rmq01]
+2023-07-11 00:05:38,255 p=7721 u=ubuntu n=ansible | ok: [app01]
+2023-07-11 00:05:38,278 p=7721 u=ubuntu n=ansible | ok: [cntl]
+2023-07-11 00:05:39,898 p=7721 u=ubuntu n=ansible | ok: [db01]
+2023-07-11 00:05:39,913 p=7721 u=ubuntu n=ansible | TASK [Import VPC setup Variable] ***************************************************************************************************************************************************************
+2023-07-11 00:05:39,959 p=7721 u=ubuntu n=ansible | ok: [cntl]
+2023-07-11 00:05:39,980 p=7721 u=ubuntu n=ansible | ok: [web01]
+2023-07-11 00:05:40,004 p=7721 u=ubuntu n=ansible | ok: [app01]
+2023-07-11 00:05:40,024 p=7721 u=ubuntu n=ansible | ok: [rmq01]
+2023-07-11 00:05:40,024 p=7721 u=ubuntu n=ansible | ok: [mc01]
+2023-07-11 00:05:40,034 p=7721 u=ubuntu n=ansible | ok: [db01]
+2023-07-11 00:05:40,043 p=7721 u=ubuntu n=ansible | TASK [Update hosts file for all the hosts] *****************************************************************************************************************************************************
+2023-07-11 00:05:40,868 p=7721 u=ubuntu n=ansible | changed: [web01]
+2023-07-11 00:05:40,868 p=7721 u=ubuntu n=ansible | changed: [app01]
+2023-07-11 00:05:40,869 p=7721 u=ubuntu n=ansible | changed: [mc01]
+2023-07-11 00:05:40,869 p=7721 u=ubuntu n=ansible | changed: [rmq01]
+2023-07-11 00:05:40,913 p=7721 u=ubuntu n=ansible | changed: [cntl]
+2023-07-11 00:05:41,169 p=7721 u=ubuntu n=ansible | changed: [db01]
+2023-07-11 00:05:41,187 p=7721 u=ubuntu n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2023-07-11 00:05:41,188 p=7721 u=ubuntu n=ansible | app01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-11 00:05:41,188 p=7721 u=ubuntu n=ansible | cntl                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-11 00:05:41,188 p=7721 u=ubuntu n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-11 00:05:41,188 p=7721 u=ubuntu n=ansible | mc01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-11 00:05:41,189 p=7721 u=ubuntu n=ansible | rmq01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-07-11 00:05:41,189 p=7721 u=ubuntu n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
