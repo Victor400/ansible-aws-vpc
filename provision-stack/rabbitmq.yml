@@ -35,11 +35,10 @@
 
     - name: Install unixODBC
       apt:
-        name: unixODBC
+        name: unixodbc
         state: present
       tags:
         - package
-
 
     - name: Add an Apt signing key, uses whichever key is at the URL
       apt_key:
